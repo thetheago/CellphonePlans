@@ -1,0 +1,17 @@
+{
+    "name": "thiago/cellphone-plans",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Thiago\\CellphonePlans\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "thiago.henrique",
+            "email": "thiago56011@gmail.com"
+        }
+    ],
+    "require": {}
+}
