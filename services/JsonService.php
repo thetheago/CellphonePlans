@@ -1,9 +1,8 @@
 <?php
 
-include_once ("interfaces/JsonServiceInterface.php");
+namespace Services;
 
-use interfaces\JsonServiceInterface;
-
+use Interfaces\JsonServiceInterface;
 
 class JsonService implements JsonServiceInterface {
 

@@ -4,7 +4,9 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Thiago\\CellphonePlans\\": "src/"
+            "Thiago\\CellphonePlans\\": "src/",
+            "Interfaces\\": "interfaces/",
+            "Services\\": "services/"
         }
     },
     "authors": [
