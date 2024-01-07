@@ -3,10 +3,15 @@
 
 O objetivo deste teste é propor um sistema que se encarrega de exibir preço dos planos vendidos junto aos aparelhos de telefone e a sua principal característica é a possibilidade de associar vários planos a um telefone.
 
+# Critérios de aceitação
+
+O candidato deverá escrever um programa que receberá uma lista de planos(data.json) e deverá retornar a lista filtrada baseada nos critérios abaixo:
+
+* O sistema só poderá exibir planos que tenham schedule.startDate válidos, ou seja, menor que a data atual.
+* O sistema só poderá exibir 1 única vez planos que tenham os mesmos : name, localidade dando preferência quem possuir o schedule.startDate mais recente.
+* Note que o campo localidade possui uma hierarquia (PAÍS -> ESTADO -> CIDADE). Esta hierarquia deverá ser respeitada, de maneira que a cidade terá maior prioridade que estado e país. O sistema só poderá exibir 1 única vez planos que tenham os mesmos : name dando preferência a hierarquia de localidades.
 
 # Critérios de avaliação
-
-
 
 *   **Funcionalidade**: atender todos os critérios de aceitação mencionados;
 *   **Organização do projeto**: diretórios, arquivos, classes, ...;

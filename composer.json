@@ -15,5 +15,7 @@
             "email": "thiago56011@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "ext-json": "*"
+    }
 }
