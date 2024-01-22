@@ -6,7 +6,8 @@
         "psr-4": {
             "Thiago\\CellphonePlans\\": "src/",
             "Interfaces\\": "interfaces/",
-            "Services\\": "services/"
+            "Services\\": "services/",
+            "Command\\": "command/"
         }
     },
     "authors": [

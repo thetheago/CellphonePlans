@@ -1,26 +1,27 @@
 <?php
 
-namespace Thiago\CellphonePlans;
+namespace Command;
 
-use Services\JsonService;
+use Interfaces\DeviceCommandInterface;
+use Interfaces\JsonServiceInterface;
 use Thiago\CellphonePlans\device\Device;
 use Thiago\CellphonePlans\device\DevicePlan;
-use Thiago\CellphonePlans\device\DevicesManager;
 
-class App
+class DeviceJsonCommand implements DeviceCommandInterface
 {
-    private object $deviceData;
+    private JsonServiceInterface $jsonService;
 
-    public function __construct(string $jsonPath)
+    public function __construct(JsonServiceInterface $jsonService)
     {
-        $this->deviceData = JsonService::getJsonData($jsonPath);
+        $this->jsonService = $jsonService;
     }
 
-    public function run(): void
+    public function getDevice(string $jsonPath): Device
     {
-        $device = new Device(name: $this->deviceData->Aparelho->name);
+        $deviceData = $this->jsonService->getJsonData($jsonPath);
+        $device     = new Device(name: $deviceData->Aparelho->name);
 
-        foreach ($this->deviceData->plans as $plan) {
+        foreach ($deviceData->plans as $plan) {
             $device->addPlan(new DevicePlan(
                 id: $plan->id,
                 type: $plan->type,
@@ -34,10 +35,6 @@ class App
             ));
         }
 
-        $devicesManager = new DevicesManager();
-        $devicesManager->addDevice($device);
-        $devicesManager->sortPlans();
-
-//        echo json_encode($this->deviceData);
+        return $device;
     }
 }

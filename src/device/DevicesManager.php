@@ -2,20 +2,20 @@
 
 namespace Thiago\CellphonePlans\device;
 
-class DevicesManager
+use Interfaces\DevicesManagerInterface;
+
+class DevicesManager implements DevicesManagerInterface
 {
-    /**
-     * @var array<Device>
-     */
-    private array $devices;
+    private DevicesList $devicesList;
 
     public function __construct()
     {
+        $this->devicesList = new DevicesList();
     }
 
     public function addDevice(Device $device): void
     {
-        $this->devices[] = $device;
+        $this->devicesList->addDevice($device);
     }
 
     public function sortPlans(): void
@@ -23,8 +23,8 @@ class DevicesManager
         // Sort all plans of all devices
     }
 
-    public function sortPlan(int $planId): void
+    public function getDevices(): DevicesList
     {
-        // Sort plans of device
+        return $this->devicesList;
     }
 }
