@@ -20,7 +20,7 @@ class DevicesManager implements DevicesManagerInterface
 
     public function sortPlans(): void
     {
-        // Sort all plans of all devices
+        // Sort all plans of device
     }
 
     public function getDevices(): DevicesList

@@ -6,6 +6,7 @@ use Command\DeviceCommandHandler;
 use Command\DeviceJsonCommand;
 use Services\JsonService;
 use Thiago\CellphonePlans\device\DevicesManager;
+use Thiago\CellphonePlans\response\DeviceHttpJsonResponse;
 
 // Dependencies
 $jsonService = new JsonService();
@@ -18,6 +19,4 @@ $deviceCommandHandler = new DeviceCommandHandler($devicesManager);
 $deviceJsonCommand = new DeviceJsonCommand($jsonService);
 $devicesSorted = $deviceCommandHandler->execute($deviceJsonCommand);
 
-foreach ($devicesSorted as $key => $device) {
-    echo $device->getName();
-}
+echo new DeviceHttpJsonResponse($devicesSorted);
