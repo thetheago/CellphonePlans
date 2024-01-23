@@ -6,7 +6,7 @@ class DevicePlan
 {
     private int $id;
     private string $type;
-    private string $name;
+    public string $name;
     private int $phonePrice;
     private int $phonePriceOnPlan;
     private int $installments;

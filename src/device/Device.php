@@ -45,4 +45,14 @@ class Device
     {
         return $this->devicePlans;
     }
+
+    public function removePlan(int $id): void
+    {
+        foreach ($this->devicePlans as $key => $plan) {
+            if ($plan->getId() === $id) {
+                unset($this->devicePlans[$key]);
+                return;
+            }
+        }
+    }
 }

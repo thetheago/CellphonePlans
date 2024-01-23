@@ -4,7 +4,7 @@
    },
 
    "plans":[  
-      {  
+      {
          "id":1,
          "type":"pos",
          "name":"Família 50GB",
@@ -28,7 +28,7 @@
          "phonePriceOnPlan":2229,
          "installments":12,
          "monthly_fee":499,
-         "schedule":{  
+         "schedule":{
             "startDate":"2019-05-23 00:00"
          },
          "localidade": {
@@ -44,7 +44,7 @@
          "phonePriceOnPlan":2229,
          "installments":12,
          "monthly_fee":499,
-         "schedule":{  
+         "schedule":{
             "startDate":"2019-05-23 00:00"
          },
          "localidade": {
