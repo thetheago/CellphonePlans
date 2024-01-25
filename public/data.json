@@ -96,8 +96,8 @@
             "startDate":"2019-05-23 00:00"
          },
          "localidade": {
-            "nome": "BELO HORIZONTE",
-            "prioridade" : 3
+            "nome": "BRASIL",
+            "prioridade" : 1
          }
       }
    ]

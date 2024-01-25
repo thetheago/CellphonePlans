@@ -29,5 +29,14 @@ class DevicesManager implements DevicesManagerInterface
     {
         $filterInvalidDate = new FilterPlansWithInvalidDate(new FilterPlansLocalePriority());
         $filterInvalidDate->filter($this->devicesList);
+        $this->orderPlansByPriority($this->devicesList);
     }
+
+    private function orderPlansByPriority(DevicesList $devicesList): void
+    {
+        foreach ($devicesList->getDevices() as $device) {
+            $device->orderPlansByPriority();
+        }
+    }
+
 }

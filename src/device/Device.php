@@ -63,4 +63,11 @@ class Device
             }
         }
     }
+
+    public function orderPlansByPriority(): void
+    {
+        usort($this->devicePlans, function ($a, $b) {
+            return $a->getLocale()->prioridade - $b->getLocale()->prioridade;
+        });
+    }
 }
