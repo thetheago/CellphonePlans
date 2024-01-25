@@ -1,3 +1,11 @@
+# Notas de Thiago
+
+Versão PHP 8 <
+
+Para rodar o projeto : `php -S localhost:8000 -t public`
+
+O objetivo com esse repositório é aplicar oque eu pretendia fazer ao ver este
+teste pela primeira vez (sem a limitação de tempo e pressão de ter alguem me observando), e também, aplicar algumas estruturas e patterns a mais como forma de estudo e prática. 
 
 # Objetivo
 
@@ -33,5 +41,5 @@ Para este teste será permitido:
 *   Pesquisar no Google;
 *   **É permitido** perguntar sobre as regras de negócio para o entrevistador;
 *   Utilizar a linguagem de programação Javascript.
-*   **Não é permitido** utilizar bibliotecas de terceiros. Ex.: lodash, jquery, angular, etc.
+*   **Não é permitido** utilizar frameworks ou bibliotecas de terceiros. Ex.: lodash, jquery, angular, etc.
 
