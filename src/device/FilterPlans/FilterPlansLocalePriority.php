@@ -2,16 +2,66 @@
 
 namespace Thiago\CellphonePlans\device\FilterPlans;
 
+use Thiago\CellphonePlans\device\DevicePlan;
 use Thiago\CellphonePlans\device\DevicesList;
-use Thiago\CellphonePlans\device\FilterPlans\FilterPlansInterface;
 
 class FilterPlansLocalePriority implements FilterPlansInterface
 {
+    /**
+     * @param DevicePlan[] $devicePlans
+     * @param int $timeNow
+     * @return int
+     */
+    private function getPlanIdWithMostRecentStarDate(array $devicePlans, int $timeNow): int
+    {
+        $planIdWithMostRecentStartDate = 0;
+        $lastDifference = PHP_INT_MAX;
+
+        foreach ($devicePlans as $plan) {
+
+            $differenceBetweenPlanTimeAndNow = abs($timeNow - strtotime($plan->getStartDate()));
+
+            if ($differenceBetweenPlanTimeAndNow <= $lastDifference) {
+                $lastDifference = $differenceBetweenPlanTimeAndNow;
+                $planIdWithMostRecentStartDate = $plan->getId();
+            }
+        }
+
+        return $planIdWithMostRecentStartDate;
+    }
+
     public function filter(DevicesList $devicesList): void
     {
-        // TODO: Implement filter() method.
-        // Filtrar planos pelo nome, localidade
-        // Ideia : Agrupar os planos em nome e localidade, filtrar e retornar os ids dos que devem permanecer
-        // fazer um array_diff com todos os ids e remover os que não devem permanecer.
+        $timeNow = time();
+
+        foreach ($devicesList->getDevices() as $device) {
+            $groups = [];
+
+            foreach ($device->getDevicePlans() as $plan) {
+                $nameGroup = $plan->getName();
+                $priority  = $plan->getLocale()->prioridade;
+
+                $groups[$nameGroup][$priority][] = $plan;
+            }
+
+            $plansIdToStay = [];
+
+            foreach ($groups as $groupNamed) {
+                foreach ($groupNamed as $priorityGroup) {
+                    if (count($priorityGroup) > 1) {
+                        $plansIdToStay[] = $this->getPlanIdWithMostRecentStarDate($priorityGroup, $timeNow);
+                    } else {
+                        $plansIdToStay[] = $priorityGroup[0]->getId();
+                    }
+                }
+            }
+
+            $devicePlansIds = $device->getDevicePlansIds();
+            $plansIdToRemove = array_diff($devicePlansIds, $plansIdToStay);
+
+            foreach ($plansIdToRemove as $id) {
+                $device->removePlan($id);
+            }
+        }
     }
 }

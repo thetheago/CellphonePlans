@@ -39,11 +39,19 @@ class Device
     }
 
     /**
-     * @return array
+     * @return DevicePlan[]
      */
     public function getDevicePlans(): array
     {
         return $this->devicePlans;
+    }
+
+    /**
+     * @return int[]
+     */
+    public function getDevicePlansIds(): array
+    {
+        return array_map(fn($plan) => $plan->getId(), $this->devicePlans);
     }
 
     public function removePlan(int $id): void
