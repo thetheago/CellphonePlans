@@ -1,8 +1,7 @@
 # Notas de Thiago
 
-Versão PHP 8 <
+Para rodar o projeto : Rode `docker compose up` e acesse localhost:8000
 
-Para rodar o projeto : `php -S localhost:8000 -t public`
 
 O objetivo com esse repositório é aplicar oque eu pretendia fazer ao ver este
 teste pela primeira vez (sem a limitação de tempo e pressão de ter alguem me observando), e também, aplicar algumas estruturas e patterns a mais como forma de estudo e prática. 

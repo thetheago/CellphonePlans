@@ -10,7 +10,7 @@ class DevicePlan
     private int $phonePrice;
     private int $phonePriceOnPlan;
     private int $installments;
-    private int $monthlyFee;
+    private float $monthlyFee;
     private string $startDate;
     private object $locale;
 
@@ -21,7 +21,7 @@ class DevicePlan
         int $phonePrice,
         int $phonePriceOnPlan,
         int $installments,
-        int $monthlyFee,
+        float $monthlyFee,
         string $startDate,
         object $locale
     ) {
@@ -66,7 +66,7 @@ class DevicePlan
         return $this->installments;
     }
 
-    public function getMonthlyFee(): int
+    public function getMonthlyFee(): float
     {
         return $this->monthlyFee;
     }
