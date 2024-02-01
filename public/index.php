@@ -19,4 +19,5 @@ $deviceCommandHandler = new DeviceCommandHandler($devicesManager);
 $deviceJsonCommand = new DeviceJsonCommand($jsonService);
 $devicesSorted = $deviceCommandHandler->execute($deviceJsonCommand);
 
+header('Content-type: application/json');
 echo new DeviceHttpJsonResponse($devicesSorted);
