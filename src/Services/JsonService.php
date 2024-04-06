@@ -1,11 +1,11 @@
 <?php
 
-namespace Services;
+namespace Thiago\CellphonePlans\Services;
 
-use Interfaces\JsonServiceInterface;
+use Thiago\CellphonePlans\Interfaces\JsonServiceInterface;
 
-class JsonService implements JsonServiceInterface {
-
+class JsonService implements JsonServiceInterface
+{
     /**
      * Método responsável por buscar os dados.
      * @param string $jsonPath
@@ -16,5 +16,4 @@ class JsonService implements JsonServiceInterface {
         $data = file_get_contents($jsonPath);
         return json_decode($data);
     }
-
 }

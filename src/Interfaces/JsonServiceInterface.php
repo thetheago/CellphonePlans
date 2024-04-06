@@ -1,6 +1,6 @@
 <?php
 
-namespace Interfaces;
+namespace Thiago\CellphonePlans\Interfaces;
 
 interface JsonServiceInterface
 {

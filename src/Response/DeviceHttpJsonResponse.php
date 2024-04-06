@@ -1,8 +1,8 @@
 <?php
 
-namespace Thiago\CellphonePlans\response;
+namespace Thiago\CellphonePlans\Response;
 
-use Thiago\CellphonePlans\device\DevicesList;
+use Thiago\CellphonePlans\Device\DevicesList;
 
 class DeviceHttpJsonResponse
 {

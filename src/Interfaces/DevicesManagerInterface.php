@@ -1,9 +1,9 @@
 <?php
 
-namespace Interfaces;
+namespace Thiago\CellphonePlans\Interfaces;
 
-use Thiago\CellphonePlans\device\Device;
-use Thiago\CellphonePlans\device\DevicesList;
+use Thiago\CellphonePlans\Device\Device;
+use Thiago\CellphonePlans\Device\DevicesList;
 
 interface DevicesManagerInterface
 {

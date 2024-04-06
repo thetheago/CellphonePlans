@@ -1,8 +1,8 @@
 <?php
 
-namespace Thiago\CellphonePlans\device\FilterPlans;
+namespace Thiago\CellphonePlans\Device\FilterPlans;
 
-use Thiago\CellphonePlans\device\DevicesList;
+use Thiago\CellphonePlans\Device\DevicesList;
 
 interface FilterPlansInterface
 {

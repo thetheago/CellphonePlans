@@ -1,6 +1,6 @@
 <?php
 
-namespace Thiago\CellphonePlans\device;
+namespace Thiago\CellphonePlans\Device;
 
 use ArrayIterator;
 use IteratorAggregate;

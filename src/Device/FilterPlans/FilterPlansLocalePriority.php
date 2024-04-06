@@ -1,9 +1,9 @@
 <?php
 
-namespace Thiago\CellphonePlans\device\FilterPlans;
+namespace Thiago\CellphonePlans\Device\FilterPlans;
 
-use Thiago\CellphonePlans\device\DevicePlan;
-use Thiago\CellphonePlans\device\DevicesList;
+use Thiago\CellphonePlans\Device\DevicePlan;
+use Thiago\CellphonePlans\Device\DevicesList;
 
 class FilterPlansLocalePriority implements FilterPlansInterface
 {

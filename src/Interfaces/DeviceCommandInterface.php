@@ -1,8 +1,8 @@
 <?php
 
-namespace Interfaces;
+namespace Thiago\CellphonePlans\Interfaces;
 
-use Thiago\CellphonePlans\device\Device;
+use Thiago\CellphonePlans\Device\Device;
 
 interface DeviceCommandInterface
 {

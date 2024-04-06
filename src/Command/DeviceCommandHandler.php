@@ -1,10 +1,10 @@
 <?php
 
-namespace Command;
+namespace Thiago\CellphonePlans\Command;
 
-use Interfaces\DeviceCommandInterface;
-use Interfaces\DevicesManagerInterface;
-use Thiago\CellphonePlans\device\DevicesList;
+use Thiago\CellphonePlans\Interfaces\DeviceCommandInterface;
+use Thiago\CellphonePlans\Interfaces\DevicesManagerInterface;
+use Thiago\CellphonePlans\Device\DevicesList;
 
 class DeviceCommandHandler
 {

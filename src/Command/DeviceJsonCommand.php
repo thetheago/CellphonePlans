@@ -1,11 +1,11 @@
 <?php
 
-namespace Command;
+namespace Thiago\CellphonePlans\Command;
 
-use Interfaces\DeviceCommandInterface;
-use Interfaces\JsonServiceInterface;
-use Thiago\CellphonePlans\device\Device;
-use Thiago\CellphonePlans\device\DevicePlan;
+use Thiago\CellphonePlans\Interfaces\DeviceCommandInterface;
+use Thiago\CellphonePlans\Interfaces\JsonServiceInterface;
+use Thiago\CellphonePlans\Device\Device;
+use Thiago\CellphonePlans\Device\DevicePlan;
 
 class DeviceJsonCommand implements DeviceCommandInterface
 {

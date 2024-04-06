@@ -2,11 +2,11 @@
 
 require_once "../vendor/autoload.php";
 
-use Command\DeviceCommandHandler;
-use Command\DeviceJsonCommand;
-use Services\JsonService;
-use Thiago\CellphonePlans\device\DevicesManager;
-use Thiago\CellphonePlans\response\DeviceHttpJsonResponse;
+use Thiago\CellphonePlans\Command\DeviceCommandHandler;
+use Thiago\CellphonePlans\Command\DeviceJsonCommand;
+use Thiago\CellphonePlans\Services\JsonService;
+use Thiago\CellphonePlans\Device\DevicesManager;
+use Thiago\CellphonePlans\Response\DeviceHttpJsonResponse;
 
 // Dependencies
 $jsonService = new JsonService();

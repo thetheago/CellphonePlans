@@ -1,10 +1,10 @@
 <?php
 
-namespace Thiago\CellphonePlans\device;
+namespace Thiago\CellphonePlans\Device;
 
-use Interfaces\DevicesManagerInterface;
-use Thiago\CellphonePlans\device\FilterPlans\FilterPlansLocalePriority;
-use Thiago\CellphonePlans\device\FilterPlans\FilterPlansWithInvalidDate;
+use Thiago\CellphonePlans\Interfaces\DevicesManagerInterface;
+use Thiago\CellphonePlans\Device\FilterPlans\FilterPlansLocalePriority;
+use Thiago\CellphonePlans\Device\FilterPlans\FilterPlansWithInvalidDate;
 
 class DevicesManager implements DevicesManagerInterface
 {
