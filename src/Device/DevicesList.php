@@ -26,7 +26,7 @@ class DevicesList implements IteratorAggregate
     }
 
     /**
-     * @return array
+     * @return Device[]
      */
     public function getDevices(): array
     {
