@@ -13,10 +13,13 @@
     "authors": [
         {
             "name": "thiago.henrique",
-            "email": "thiago56011@gmail.com"
+            "email": "theago.dev@gmail.com"
         }
     ],
     "require": {
         "ext-json": "*"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.0"
     }
 }

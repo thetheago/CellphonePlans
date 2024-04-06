@@ -18,7 +18,6 @@ class FilterPlansLocalePriority implements FilterPlansInterface
         $lastDifference = PHP_INT_MAX;
 
         foreach ($devicePlans as $plan) {
-
             $differenceBetweenPlanTimeAndNow = abs($timeNow - strtotime($plan->getStartDate()));
 
             if ($differenceBetweenPlanTimeAndNow <= $lastDifference) {

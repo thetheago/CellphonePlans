@@ -38,5 +38,4 @@ class DevicesManager implements DevicesManagerInterface
             $device->orderPlansByPriority();
         }
     }
-
 }
