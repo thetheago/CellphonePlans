@@ -17,7 +17,7 @@ class DeviceCommandHandler
 
     public function execute(DeviceCommandInterface $deviceCommand): DevicesList
     {
-        $device = $deviceCommand->getDevice(__DIR__ . '/../public/data.json');
+        $device = $deviceCommand->getDevice(__DIR__ . '/../../public/data.json');
         $this->devicesManager->addDevice($device);
         $this->devicesManager->sortPlans();
 

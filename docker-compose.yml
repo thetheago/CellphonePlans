@@ -6,5 +6,6 @@ services:
     ports:
       - 8000:8000
     volumes:
-      - ./:/src/app/
-    command: "php -S 0.0.0.0:8000 -t public"
+      - ./:/var/www/
+    command: >
+      sh -c "composer install && php -S 0.0.0.0:8000 -t public"

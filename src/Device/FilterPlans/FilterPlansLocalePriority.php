@@ -63,7 +63,7 @@ class FilterPlansLocalePriority implements FilterPlansInterface
     }
 
     /**
-     * @param array $devicePlans
+     * @param array $priorityGroup
      * @param int $timeNow
      * @return int
      */
